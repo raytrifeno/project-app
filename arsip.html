@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Arsip - Website</title>
+    <title>Arsip</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Graduate&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
@@ -11,14 +11,16 @@
 
     <style>
       body {
-        background-color: #e5e5e5;
+        background-color:#f5f5f5;
         font-family: "graduate", sans-serif;
         color: black;
       }
       .navbar {
-        background-color: #333;
+        background-color: #61616142;
         padding: 5px;
         transition: top 0.5s ease-in-out;
+        border-bottom: 1px solid black;
+        border-radius: 4px;
       }
       .navbar-brand img {
         height: 3rem;
@@ -242,7 +244,6 @@
 .card-body:hover {
     background-color: #121213;
     color: rgb(255, 255, 255);
-    border-radius: 0 5px 5px 0;
 }
 
 /* Hapus padding container */
@@ -265,9 +266,38 @@
   border-top: none;
 }
 
-
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
   
-    </style>
+.col-md-10 {
+  display: flex;
+  align-items: center; 
+}
+
+
+.the-crd {
+  border: 1px solid #000000;
+  transition: background-color 0.6s ease-in-out, color 0.6s ease-in-out;
+  background-color: rgba(246, 225, 198, 0.518);
+
+}
+
+.the-crd:hover {
+  background-color: #121213;
+  color: rgb(255, 255, 255);
+}
+
+/* Agar .card-body ikut berubah saat .the-crd di-hover */
+.the-crd:hover .card-body {
+  background-color: #121213;
+  color: rgb(255, 255, 255);
+}
+
+
+
+</style>
   </head>
   <body>
     <!-- Navbar -->
@@ -298,27 +328,27 @@
       </div>
     </nav>
 
-    <!-- welcome-editorial -->
+    <!-- welcome-arsip -->
 
-    <section class="welcome-editorial py-5">
+    <section class="welcome-editorial py-5" style="background-color: #1976D2;">
       <div class="container py-3 mt-3">
+        <h1 style="margin-inline-start: 10rem;">ARSIP</h1>
         <div class="row justify-content-center">
-          <div class="col-md-8 bg-secondary p-4 rounded">
+          <div class="col-md-8 p-4">
             <p class="judul-editorial">
-              "SELAMAT DATANG DI HALAMAN EDITORIAL KAMI.DI SINI,ANDA DAPAT MENEMUKAN BERBAGAI KONTEN TERDAHULU YANG
+              "SELAMAT DATANG DI HALAMAN ARSIP KAMI.DI SINI,ANDA DAPAT MENEMUKAN BERBAGAI KONTEN TERDAHULU YANG
               TELAH KAMI PUBLIKASIKAN.JELAJAHI DAN TEMUKAN INFORMASI BERHARGA DARI WAKTU KE WAKTU."
             </p>
           </div>
         </div>
       </div>
     </section>
-    
-
-        <!-- end-welcome-editorial -->
+  
+        <!-- end-welcome arsip -->
          
-    <!-- the-editorial -->
+    <!-- the-arsip -->
 
-    <section class="the-editorial pb-5">
+    <section class="the-editorial">
       <div class="container-fluid px-0">
           <div class="row">
             <div class="col-12">
@@ -329,7 +359,7 @@
                     <img src="aset/3.jpeg" class="img-fluid" alt="...">
                   </div>
                   <div class="col-md-10">
-                    <div class="card-body ">
+                    <div class="card-body">
                         <p class="card-text"><small>JANUARI-02-2025</small></p>
                       <h5 class="card-title" style="font-size: 30px;">JUDUL ARSIP JUDUL ARSIP JUDUL ARSIP</h5>
                       <p class="card-text ms-4 ">NAMA PENULIS</p>
@@ -361,7 +391,7 @@
                       <img src="aset/3.jpeg" class="img-fluid" alt="...">
                     </div>
                     <div class="col-md-10">
-                      <div class="card-body ">
+                      <div class="card-body">
                           <p class="card-text"><small>JANUARI-02-2025</small></p>
                         <h5 class="card-title" style="font-size: 30px;">JUDUL ARSIP JUDUL ARSIP JUDUL ARSIP</h5>
                         <p class="card-text ms-4 ">NAMA PENULIS</p>
@@ -453,9 +483,150 @@
                 </div>
           </div>
         </div>
+        <div id="hiddenContent" style="display: none;">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card the-crd" style="max-width: 100%;">
+              <a href="#" class="text-black text-decoration-none">
+              <div class="row g-0">
+                <div class="col-md-2">
+                  <img src="aset/3.jpeg" class="img-fluid" alt="...">
+                </div>
+                <div class="col-md-10">
+                  <div class="card-body">
+                      <p class="card-text"><small>JANUARI-02-2025</small></p>
+                    <h5 class="card-title" style="font-size: 30px;">JUDUL ARSIP JUDUL ARSIP JUDUL ARSIP</h5>
+                    <p class="card-text ms-4 ">NAMA PENULIS</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            </div>
+            <div class="card the-crd" style="max-width: 100%;">
+              <a href="#" class="text-black text-decoration-none">
+                <div class="row g-0">
+                  <div class="col-md-2">
+                    <img src="aset/3.jpeg" class="img-fluid" alt="...">
+                  </div>
+                  <div class="col-md-10">
+                    <div class="card-body ">
+                        <p class="card-text"><small>JANUARI-02-2025</small></p>
+                      <h5 class="card-title" style="font-size: 30px;">JUDUL ARSIP JUDUL ARSIP JUDUL ARSIP</h5>
+                      <p class="card-text ms-4 ">NAMA PENULIS</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="card the-crd" style="max-width: 100%;">
+              <a href="#" class="text-black text-decoration-none">
+                <div class="row g-0">
+                  <div class="col-md-2">
+                    <img src="aset/3.jpeg" class="img-fluid" alt="...">
+                  </div>
+                  <div class="col-md-10">
+                    <div class="card-body">
+                        <p class="card-text"><small>JANUARI-02-2025</small></p>
+                      <h5 class="card-title" style="font-size: 30px;">JUDUL ARSIP JUDUL ARSIP JUDUL ARSIP</h5>
+                      <p class="card-text ms-4 ">NAMA PENULIS</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="card the-crd" style="max-width: 100%;">
+              <a href="#" class="text-black text-decoration-none">
+                <div class="row g-0">
+                  <div class="col-md-2">
+                    <img src="aset/3.jpeg" class="img-fluid" alt="...">
+                  </div>
+                  <div class="col-md-10">
+                    <div class="card-body ">
+                        <p class="card-text"><small>JANUARI-02-2025</small></p>
+                      <h5 class="card-title" style="font-size: 30px;">JUDUL ARSIP JUDUL ARSIP JUDUL ARSIP</h5>
+                      <p class="card-text ms-4 ">NAMA PENULIS</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+          </div>
+          <div class="col-12">
+              <div class="card the-crd" style="max-width: 100%;">
+                <a href="#" class="text-black text-decoration-none">
+                  <div class="row g-0">
+                    <div class="col-md-2">
+                      <img src="aset/3.jpeg" class="img-fluid" alt="...">
+                    </div>
+                    <div class="col-md-10">
+                      <div class="card-body ">
+                          <p class="card-text"><small>JANUARI-02-2025</small></p>
+                        <h5 class="card-title" style="font-size: 30px;">JUDUL ARSIP JUDUL ARSIP JUDUL ARSIP</h5>
+                        <p class="card-text ms-4 ">NAMA PENULIS</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="card the-crd" style="max-width: 100%;">
+                <a href="#" class="text-black text-decoration-none">
+                  <div class="row g-0">
+                    <div class="col-md-2">
+                      <img src="aset/3.jpeg" class="img-fluid" alt="...">
+                    </div>
+                    <div class="col-md-10">
+                      <div class="card-body ">
+                          <p class="card-text"><small>JANUARI-02-2025</small></p>
+                        <h5 class="card-title" style="font-size: 30px;">JUDUL ARSIP JUDUL ARSIP JUDUL ARSIP</h5>
+                        <p class="card-text ms-4 ">NAMA PENULIS</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="card the-crd" style="max-width: 100%;">
+                <a href="#" class="text-black text-decoration-none">
+                  <div class="row g-0">
+                    <div class="col-md-2">
+                      <img src="aset/3.jpeg" class="img-fluid" alt="...">
+                    </div>
+                    <div class="col-md-10">
+                      <div class="card-body ">
+                          <p class="card-text"><small>JANUARI-02-2025</small></p>
+                        <h5 class="card-title" style="font-size: 30px;">JUDUL ARSIP JUDUL ARSIP JUDUL ARSIP</h5>
+                        <p class="card-text ms-4 ">NAMA PENULIS</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="card the-crd" style="max-width: 100%;">
+                <a href="#" class="text-black text-decoration-none">
+                  <div class="row g-0">
+                    <div class="col-md-2">
+                      <img src="aset/3.jpeg" class="img-fluid" alt="...">
+                    </div>
+                    <div class="col-md-10">
+                      <div class="card-body ">
+                          <p class="card-text"><small>JANUARI-02-2025</small></p>
+                        <h5 class="card-title" style="font-size: 30px;">JUDUL ARSIP JUDUL ARSIP JUDUL ARSIP</h5>
+                        <p class="card-text ms-4 ">NAMA PENULIS</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+        </div>
+      </div>
+
       </section>
 
-     <!-- end-the-editorial -->
+      <div class="d-flex justify-content-center my-4">  
+        <button id="loadMoreBtn" style="border: none; padding: none;">
+          <i class="bi bi-arrow-down-circle " style="font-size: 40px;"></i>
+        </button>
+      </div>
+      
+`     <!-- end-the-arsip -->
 
     <!-- Footer -->
     <footer class="footer py-4 text-center" style="background-color: #c7c5c5; position: relative">
@@ -514,7 +685,7 @@
         if (prevScrollpos > currentScrollPos) {
           navbar.style.top = "0";
         } else {
-          navbar.style.top = "-80px"; // Sesuaikan dengan tinggi navbar Anda
+          navbar.style.top = "-70px";
         }
         prevScrollpos = currentScrollPos;
       };
@@ -523,6 +694,20 @@
       function scrollToTop() {
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+      const loadMoreBtn = document.getElementById('loadMoreBtn');
+const hiddenContent = document.getElementById('hiddenContent');
+
+loadMoreBtn.addEventListener('click', () => {
+  if (hiddenContent.style.display === 'none') {
+    hiddenContent.style.display = 'block';
+  } else {
+    hiddenContent.style.display = 'none';
+  }
+});
     </script>
   </body>
 </html>
