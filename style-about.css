@@ -1,13 +1,14 @@
 body {
-  background-color:#f5f5f5;
+  background-color: #f5f5f5;
   font-family: "graduate", sans-serif;
   color: black;
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
   width: 100%;
-  }
+}
 
 .navbar {
   background-color: #61616142;
@@ -15,7 +16,6 @@ html, body {
   transition: top 0.5s ease-in-out;
   border-bottom: 1px solid black;
   border-radius: 4px;
-  font-family: "Graduate", sans-serif;
 }
 .navbar-brand img {
   height: 3rem;
@@ -62,14 +62,12 @@ html, body {
   margin-left: 15px;
 }
 
-
 .search-icon {
   color: rgb(0, 0, 0);
   cursor: pointer;
   font-size: 25px;
   transition: all 0.3s ease;
 }
-
 
 .search-bar {
   position: absolute;
@@ -82,7 +80,6 @@ html, body {
   transition: all 0.3s ease;
   z-index: 1000;
 }
-
 
 .search-container:hover .search-bar {
   opacity: 1;
@@ -176,9 +173,8 @@ html, body {
   }
 
   .col-md-2 img {
-  border-radius: 5px;
-}
-
+    border-radius: 5px;
+  }
 }
 
 .footer .footer-logo {
@@ -196,9 +192,8 @@ html, body {
   height: 3rem;
   width: 3rem;
   border-radius: 50%;
-  flex-shrink: 0; 
+  flex-shrink: 0;
 }
-
 
 #scrollTopBtn {
   position: absolute;
@@ -210,84 +205,67 @@ html, body {
   height: 100%;
 }
 
+.judul-editorial {
+  font-family: "Graduate", sans-serif;
+  text-align: justify;
+  word-spacing: -5px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  .judul-editorial {
+    text-align: start;
+    font-size: 1rem;
+    word-spacing: normal;
+    line-height: 1.8;
+  }
+}
+
 .card-body {
-transition: background-color 0.6s ease-in-out, color 0.6s ease-in-out;
-padding-bottom: 50px;
+  transition: background-color 0.6s ease-in-out, color 0.6s ease-in-out;
+  padding-bottom: 50px;
 }
 
 .card-body:hover {
-background-color: #121213;
-color: rgb(255, 255, 255);
+  background-color: #121213;
+  color: rgb(255, 255, 255);
 }
-
 
 .the-editorial .container-fluid {
-padding-left: 0;
-padding-right: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
-
 
 .the-editorial .card {
-border-radius: 0;
-border-left: none;
-border-right: none;
-
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
 }
-
-
 
 .the-editorial .card + .card {
-border-top: none;
+  border-top: none;
 }
-
-
 
 .col-md-10 {
-display: flex;
-align-items: center; 
+  display: flex;
+  align-items: center;
 }
 
-
 .the-crd {
-border: 1px solid #000000;
-transition: background-color 0.6s ease-in-out, color 0.6s ease-in-out;
-background-color: rgba(246, 225, 198, 0.518);
-
+  border: 1px solid #000000;
+  transition: background-color 1s ease-in-out, color 1s ease-in-out;
+  background-color: rgba(246, 225, 198, 0.518);
 }
 
 .the-crd:hover {
-background-color: #121213;
-color: rgb(255, 255, 255);
+  background-color: #121213;
+  color: rgb(255, 255, 255);
 }
-
 
 .the-crd:hover .card-body {
-background-color: #121213;
-color: rgb(255, 255, 255);
-}
-
-.txt-link {
-  position: relative;
-  text-decoration: none;
-  color: #000; /* sesuaikan warna sesuai kebutuhan */
-}
-
-/* Membuat garis bawah dengan pseudo-element */
-.txt-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px; /* ketebalan garis */
-  background-color: #000; /* sesuaikan warna garis */
-  transform: scaleX(0); /* mulai dalam keadaan tidak terlihat */
-  transform-origin: bottom left;
-  transition: transform 0.3s ease-in-out;
-}
-
-/* Efek hover untuk menampilkan garis bawah */
-.txt-link:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom right;
+  background-color: #121213;
+  color: rgb(255, 255, 255);
+ 
 }

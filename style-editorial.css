@@ -277,3 +277,29 @@ color: rgb(255, 255, 255);
 background-color: #121213;
 color: rgb(255, 255, 255);
 }
+
+.txt-link {
+  position: relative;
+  text-decoration: none;
+  color: #000; /* sesuaikan warna sesuai kebutuhan */
+}
+
+/* Membuat garis bawah dengan pseudo-element */
+.txt-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px; /* ketebalan garis */
+  background-color: #000; /* sesuaikan warna garis */
+  transform: scaleX(0); /* mulai dalam keadaan tidak terlihat */
+  transform-origin: bottom left;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Efek hover untuk menampilkan garis bawah */
+.txt-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom right;
+}

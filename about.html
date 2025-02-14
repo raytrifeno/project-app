@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Graduate&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style-about.css">
+    
+    <body>
+    </head>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="home.html">
+          <img src="aset/ray.jpg" alt="Logo" />
+          RAY TRIFENO
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="editorail.html" data-text="EDITORIAL">EDITORIAL</a></li>
+            <li class="nav-item"><a class="nav-link" href="arsip.html" data-text="ARSIP">ARSIP</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html" data-text="ABOUT">ABOUT</a></li>
+            <li class="nav-item"><a class="nav-link" href="kirim-tulisan.html" data-text="KIRIM TULISAN">KIRIM TULISAN</a></li>
+          </ul>
+          <!-- Search container -->
+          <div class="search-container">
+            <i class="bi bi-search search-icon"></i>
+            <div class="search-bar">
+              <input type="text" placeholder="Search..." />
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+      <!-- welcome- about -->
+
+      <section class="welcome-about py-5" style="background-color: #7f7f7f;">
+        <div class="container py-3 mt-3">
+          <h1 class="ms-md-5">ABOUT</h1>
+          <div class="row justify-content-center">
+            <div class="col-md-8 p-4">
+              <p class="judul-editorial fs-md-5">
+                "SELAMAT DATANG DI HALAMAN ARSIP KAMI.DI SINI,ANDA DAPAT MENEMUKAN BERBAGAI KONTEN TERDAHULU YANG
+                TELAH KAMI PUBLIKASIKAN.JELAJAHI DAN TEMUKAN INFORMASI BERHARGA DARI WAKTU KE WAKTU."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+          <!-- end-welcome about -->    
+    
+    
+    <!-- Footer -->
+    <footer class="footer py-4 text-center" style="background-color: #c7c5c5; position: relative">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Bagian Kiri: Logo dan Informasi Kontak -->
+          <div class="col-md-6 text-start">
+            <div class="footer-logo">
+              <a class="navbar-brand" href="home.html" style="font-size: 20px"
+                ><img src="aset/ray.jpg" alt="Logo" />
+                RAY TRIFENO
+              </a>
+            </div>
+            <div class="footer-contact">
+              <p class="mb-1">Email: <a href="mailto:raysurualing@gmail.com" class="text-black">raysurualing@gmail.com</a></p>
+              <p>Contact: <a href="tel:+6283155921792" class="text-black">+6283155921792</a></p>
+            </div>
+          </div>
+
+          <!-- Bagian Kanan: Media Sosial -->
+          <div class="col-md-6 text-end fs-1">
+            <a href="https://www.youtube.com" target="_blank" class="me-3 text-dark"><i class="bi bi-youtube"></i></a>
+            <a href="whatsapp://send?phone=+6283155921792" class="me-3 text-dark"><i class="bi bi-whatsapp"></i></a>
+            <a href="#" class="me-3 text-dark"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/ray.trifeno/" target="_blank" class="text-dark"><i class="bi bi-instagram btn-IG"></i></a>
+          </div>
+        </div>
+
+        <!-- Navigasi Footer -->
+        <div class="mb-3 text-start">
+          <a href="editorail.html" class="text-black mx-2">EDITORIAL</a> / <a href="arsip.html" class="text-black mx-2">ARSIP</a> / <a href="about.html" class="text-black mx-2">ABOUT</a> /
+          <a href="kirim-tulisan.html" class="text-black mx-2">Kirim Tulisan</a>
+        </div>
+
+        <hr class="my-3" style="border-color: black" />
+        <!-- Copyright -->
+        <p class="mb-0 pt-2">© 2025 — Ray Trifeno. All Rights Reserved.</p>
+      </div>
+
+      <!-- Tombol Kembali ke Atas (Tetap di Footer) -->
+      <button id="scrollTopBtn" class="btn rounded-circle ms-3 mb-5" onclick="scrollToTop()" style="width: 60px; height: 60px; background-color: transparent; border-color: black">
+        <i class="bi bi-arrow-up fs-3"></i>
+      </button>
+    </footer>
+    <!-- end footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+         // Kode JavaScript untuk menyembunyikan/menampilkan navbar saat scroll
+ let prevScrollpos = window.pageYOffset;
+ const navbar = document.querySelector(".navbar");
+
+ window.onscroll = function() {
+   let currentScrollPos = window.pageYOffset;
+
+   if (prevScrollpos > currentScrollPos) {
+     navbar.style.top = "0";
+   } else {
+     navbar.style.top = "-70px"; 
+   }
+   prevScrollpos = currentScrollPos;
+ }
+
+ // Kode JavaScript lainnya (scrollToTop)
+ function scrollToTop() {
+   window.scrollTo({ top: 0, behavior: "smooth" });
+ }
+    </script>
+  </body>
+</html>
