@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Graduate&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Graduate&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style-kirim-tulisan.css">
-   
+
 </head>
   <body>
     <!-- Navbar -->
@@ -42,12 +42,12 @@
 
     <!-- welcome- KIRIM TULISAN -->
 
-    <section class="welcome-about py-5" style="background-color: #92a2d1;">
+    <section class="welcome-wrt py-5">
         <div class="container py-3 mt-3">
-          <h1 class="ms-md-5" style="font-family: 'graduate',sans-serif;">KIRIM TULISAN</h1>
+          <h1 class="title-head ms-md-5 fw-bold">KIRIM TULISAN</h1>
           <div class="row justify-content-center">
             <div class="col-md-8 p-3">
-              <p class="judul-editorial fs-md-5" style="font-family: 'graduate',sans-serif;">
+              <p class="judul-editorial fs-md-5">
                 Selamat datang di halaman Kirim Tulisan Di sini, Anda dapat mengirimkan karya tulis Anda untuk berbagi ide, opini, dan cerita inspiratif kepada masyarakat. Pastikan karya Anda sesuai dengan pedoman yang telah kami tetapkan sebelum pengiriman.
               </p>
             </div>
@@ -56,11 +56,10 @@
       </section>
           <!-- end-welcome KIRIM TULISAN --> 
 
-
        <!-- Rules Section -->
     <section class="rules py-3">
       <div class="container">
-        <h2 class="mb-4" style="font-family: 'graduate',sans-serif;">Pedoman Pengiriman Tulisan</h2>
+        <h2 class="mb-4">Pedoman Pengiriman Tulisan</h2>
         <ul>
           <li>
             Membahas isu-isu penting dari ekonomi, sosial, politik, kebudayaan, sains,
@@ -83,8 +82,18 @@
     <!-- Form Pengiriman Tulisan -->
     <section class="submit-writing py-5">
         <div class="container">
-          <h2 class="mb-4" style="font-family: 'graduate',sans-serif;">Form Pengiriman Tulisan</h2>
+          <h2 class="mb-4">Form Pengiriman Tulisan</h2>
           <form action="#" method="post" enctype="multipart/form-data">
+    
+            <div class="mb-3">
+              <label for="jenis_tulisan" class="form-label">Jenis Tulisan</label>
+              <select id="jenis_tulisan" name="jenis_tulisan" class="form-select" required>
+                <option value="">Pilih Jenis Tulisan</option>
+                <option value="editorial">Editorial</option>
+                <option value="arsip">Arsip</option>
+              </select>
+            </div>
+
             <!-- 1. Judul Tulisan -->
             <div class="mb-3">
               <label for="judul" class="form-label">Judul Tulisan</label>
@@ -98,7 +107,7 @@
             <!-- 3. Isi Tulisan (dengan fitur rich text editor) -->
             <div class="mb-3">
               <label for="isi_tulisan" class="form-label">Isi Tulisan</label>
-              <textarea class="form-control" style="font-family: 'Times New Roman', Times, serif !important;" id="editor" name="isi_tulisan" rows="10" placeholder="Tulis karya Anda di sini..." required></textarea>
+              <textarea class="form-control" id="editor" name="isi_tulisan" rows="10" placeholder="Tulis karya Anda di sini..." required></textarea>
             </div>
             <!-- 4. Nama Penulis -->
             <div class="mb-3">
@@ -127,13 +136,13 @@
       </section>
 
 <!-- Footer -->
-<footer class="footer mt-5 py-4 text-center" style="background-color: #c7c5c5; position: relative; bottom: 0;">
+<footer class="footer mt-5 py-4 text-center">
   <div class="container">
     <div class="row align-items-center">
       <!-- Bagian Kiri: Logo dan Informasi Kontak -->
       <div class="col-md-6 text-start">
         <div class="footer-logo">
-          <a class="navbar-brand" href="#" style="font-size: 20px;"><img src="aset/ray.jpg" alt="Logo" />
+          <a class="navbar-brand" href="#"><img src="aset/ray.jpg" alt="Logo" />
           RAY TRIFENO
         </a>
         </div>
@@ -161,13 +170,13 @@
       <a href="kirim-tulisan.html" class="txt-link text-black mx-2">Kirim Tulisan</a>
     </div>
     
-    <hr class="my-3" style="border-color: black;">
+    <hr class="my-3">
     <!-- Copyright -->
     <p class="mb-0 pt-2">© 2025 — Ray Trifeno. All Rights Reserved.</p>
   </div>
 
   <!-- Tombol Kembali ke Atas (Tetap di Footer) -->
-  <button id="scrollTopBtn" class="btn rounded-circle ms-3 mb-5" onclick="scrollToTop()" style="width: 60px; height: 60px; background-color: transparent; border-color: black;">
+  <button id="scrollTopBtn" class="btn rounded-circle ms-3 mb-5" onclick="scrollToTop()">
     <i class="bi bi-arrow-up fs-3" ></i>
   </button>
 </footer>
