@@ -14,9 +14,9 @@
   };
  
   // Kode JavaScript lainnya (scrollToTop)
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
+ function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
  
   const loadMoreBtn = document.getElementById('loadMoreBtn');
  const hiddenContent = document.getElementById('hiddenContent');
