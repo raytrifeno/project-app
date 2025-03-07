@@ -206,3 +206,7 @@ footer {
     text-align: justify;
     word-spacing: -3px;
 }
+
+.note-editor .note-editable {
+    background-color: white !important;
+}

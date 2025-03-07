@@ -7,7 +7,358 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Graduate&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style-editorial.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Graduate&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    
+    <style>
+      body {
+        background-color: rgba(246, 225, 198, 0.518);
+  font-family: "roboto", sans-serif;
+  color: black;
+}
+.navbar {
+  background-color: #f6550a;
+  padding: 5px;
+  transition: top 0.5s ease-in-out;
+}
+
+.navbar-brand {
+  font-size: 20px;
+}
+
+
+
+.navbar-brand img {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #ffffff;
+  margin: 0 10px;
+  position: relative;
+  display: inline-block;
+  padding: 5px 0;
+  transition: none;
+}
+
+.navbar-dark .navbar-nav .nav-link::after {
+  content: attr(data-text);
+  position: absolute;
+  font-weight: bold;
+  font-family: "roboto", sans-serif;
+  top: 5px;
+  right: -1px;
+  width: 0;
+  overflow: hidden;
+  color: black;
+  white-space: nowrap;
+  transition: width 0.5s ease;
+  pointer-events: none;
+  direction: rtl;
+  
+  
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  opacity: 1;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+.search-container {
+  position: relative;
+  display: inline-block;
+  margin-left: 15px;
+}
+
+/* Search icon */
+.search-icon {
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-size: 25px;
+  transition: all 0.3s ease;
+}
+
+/* Search bar */
+.search-bar {
+  position: absolute;
+  top: 50%;
+  right: 120%; /* Posisi awal di sebelah kanan ikon */
+  transform: translateY(-50%) translateX(20px);
+  width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+/* Animasi saat hover */
+.search-container:hover .search-bar {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) translateX(0);
+}
+
+@media (max-width: 768px) {
+  .search-container {
+    position: static;
+    margin-left: 0;
+    width: 100%;
+    order: 3; /* Memindahkan search ke bawah di mobile */
+    margin-top: 10px;
+  }
+
+  .search-bar {
+    position: absolute;
+    left: 0;
+    right: auto;
+    top: 100%;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .search-container:hover .search-bar,
+  .search-container:focus-within .search-bar {
+    transform: translateX(0);
+  }
+}
+
+/* Input styling */
+.search-bar input {
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.image-section img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 0.9rem;
+  }
+
+  .navbar-brand img {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .footer .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer .col-md-6 {
+    text-align: center !important;
+    margin-bottom: 20px;
+  }
+
+  .footer-logo {
+    align-items: center !important;
+  }
+
+  #scrollTopBtn {
+    /* right: 500px; */
+    bottom: 50px;
+    width: 40px !important;
+    height: 40px !important;
+    justify-content: center;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+  }
+
+  .bi-arrow-up {
+    font-size: 1.5rem !important;
+    justify-content: center;
+    margin-left: 0 !important;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 0.9rem;
+    margin: 5px 0;
+  }
+
+  .col-md-2 img {
+    border-radius: 5px;
+  }
+}
+
+.welcome-editorial {
+  background-color: #f6550a;
+}
+
+footer {
+  background-color: #c7c5c5;
+  position: relative;
+}
+.footer .footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px; /* Jarak antara gambar dan teks */
+}
+
+.footer .footer-contact {
+  margin-top: 5px; /* Jarak antara nama dan email/contact */
+}
+
+.footer .footer-logo img {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  flex-shrink: 0; /* Mencegah gambar mengecil jika tidak cukup ruang */
+}
+
+/* Menjadikan tombol scroll tetap berada di footer */
+#scrollTopBtn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 60px; 
+  height: 60px; 
+  background-color: transparent; 
+  border-color: black;
+}
+
+.col-md-2 img {
+  height: 100%;
+}
+
+/* CSS untuk judul editorial */
+.judul-editorial {
+  font-family: "Graduate", sans-serif;
+  text-align: justify;
+  word-spacing: -5px; /* Mengurangi jarak antar kata */
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Responsif untuk layar kecil (HP) */
+@media (max-width: 768px) {
+  .judul-editorial {
+    text-align: start;
+    font-size: 1rem;
+    word-spacing: normal;
+    line-height: 1.8;
+  }
+}
+
+#hiddenContent {
+  display: none;
+}
+.card-body {
+  transition: background-color 0.6s ease-in-out, color 0.6s ease-in-out;
+}
+
+.card-body:hover {
+  background-color: #121213;
+  color: rgb(255, 255, 255);
+}
+
+/* Hapus padding container */
+.the-editorial .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.card-title {
+  font-size: 30px;
+}
+
+/* Hapus border-radius dan atur card */
+.the-editorial .card {
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+}
+
+/* Hapus spacing antar card */
+.the-editorial .card + .card {
+  border-top: none;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.col-md-10 {
+  display: flex;
+  align-items: center;
+}
+
+#loadMoreBtn {
+  border: none; 
+  width: 40px; 
+  height: 40px; display: flex; align-items: center; justify-content: center; background: transparent;
+}
+
+.the-crd {
+  transition: background-color 0.6s ease-in-out, color 0.6s ease-in-out;
+  background-color: rgba(246, 225, 198, 0.518);
+  max-width: 100%;
+}
+
+.the-crd:hover {
+  background-color: #121213;
+  color: rgb(255, 255, 255);
+}
+
+.the-crd:hover .card-body {
+  background-color: #121213;
+  color: rgb(255, 255, 255);
+}
+
+.bi-arrow-down-circle {
+  font-size: 40px; line-height: 1;
+}
+
+.txt-link {
+  position: relative;
+  text-decoration: none;
+  color: #000; /* sesuaikan warna sesuai kebutuhan */
+}
+
+/* Membuat garis bawah dengan pseudo-element */
+.txt-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px; /* ketebalan garis */
+  background-color: #000; /* sesuaikan warna garis */
+  transform: scaleX(0); /* mulai dalam keadaan tidak terlihat */
+  transform-origin: bottom left;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Efek hover untuk menampilkan garis bawah */
+.txt-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom right;
+}
+
+.judul-editorial {
+  font-family: arial, sans-serif;
+  font-size: 20px;
+  text-align: justify;
+  word-spacing: -3px;
+}
+
+    </style>
+
 
   </head>
   <body>
@@ -23,10 +374,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="editorail.html" data-text="EDITORIAL">EDITORIAL</a></li>
-            <li class="nav-item"><a class="nav-link" href="arsip.html" data-text="ARSIP">ARSIP</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html" data-text="ABOUT">ABOUT</a></li>
-            <li class="nav-item"><a class="nav-link" href="kirim-tulisan.html" data-text="KIRIM TULISAN">KIRIM TULISAN</a></li>
+            <li class="nav-item"><a class="nav-link" href="editorail.html" data-text="Editorial">Editorial</a></li>
+            <li class="nav-item"><a class="nav-link" href="arsip.html" data-text="Arsip">Arsip</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html" data-text="About">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="kirim-tulisan.html" data-text="Kirim Tulisan">Kirim Tulisan</a></li>
           </ul>
           <!-- Search container -->
           <div class="search-container">
@@ -44,7 +395,7 @@
 
     <section class="welcome-editorial py-5">
       <div class="container py-3 mt-3">
-        <h1 class="ms-md-5 fw-bold"> EDITORIAL</h1>
+        <h1 class="ms-md-5 fw-bold"> Editorial</h1>
         <div class="row justify-content-center">
           <div class="col-md-8 p-4">
             <p class="judul-editorial fs-md-5">

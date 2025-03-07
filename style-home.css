@@ -1,324 +1,342 @@
 body {
-    background-color: #D6DADD;
-    /* background-color: rgba(246, 225, 198, 0.518); */
-    font-family: "graduate", sans-serif;
-    color: black;
+  background-color: #d6dadd;
+  /* background-color: rgba(246, 225, 198, 0.518); */
+  font-family: "graduate", sans-serif;
+  color: black;
 }
 
 .navbar {
-    background-color: #63636656;
-    border-radius: 4px;
-    padding: 5px;
-    transition: top 0.5s ease-in-out;
-    border-bottom: 1px solid black;
+  background-color: #63636656;
+  border-radius: 4px;
+  padding: 5px;
+  transition: top 0.5s ease-in-out;
+  border-bottom: 1px solid black;
 }
 
 .navbar-brand {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .navbar-brand img {
-    height: 3rem;
-    width: 3rem;
-    border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color: #ffffff;
-    margin: 0 10px;
-    position: relative;
-    display: inline-block;
-    padding: 5px 0;
-    transition: none;
+  color: #ffffff;
+  margin: 0 10px;
+  position: relative;
+  display: inline-block;
+  padding: 5px 0;
+  transition: none;
 }
 
 .navbar-dark .navbar-nav .nav-link::after {
-    content: attr(data-text);
-    position: absolute;
-    font-weight: bold;
-    font-family: "Graduate", sans-serif;
-    top: 5px;
-    right: 0;
-    width: 0;
-    overflow: hidden;
-    color: black;
-    white-space: nowrap;
-    transition: width 0.5s ease;
-    pointer-events: none;
-    direction: rtl;
+  content: attr(data-text);
+  position: absolute;
+  font-weight: bold;
+  font-family: "Graduate", sans-serif;
+  top: 5px;
+  right: 0;
+  width: 0;
+  overflow: hidden;
+  color: black;
+  white-space: nowrap;
+  transition: width 0.5s ease;
+  pointer-events: none;
+  direction: rtl;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
 .search-container {
-    position: relative;
-    display: inline-block;
-    margin-left: 15px;
+  position: relative;
+  display: inline-block;
+  margin-left: 15px;
 }
 
 .search-icon {
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    font-size: 25px;
-    transition: all 0.3s ease;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-size: 25px;
+  transition: all 0.3s ease;
 }
 
 .search-bar {
-    position: absolute;
-    top: 50%;
-    right: 120%;
-    transform: translateY(-50%) translateX(20px);
-    width: 200px;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    z-index: 1000;
+  position: absolute;
+  top: 50%;
+  right: 120%;
+  transform: translateY(-50%) translateX(20px);
+  width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
 }
 
 .search-container:hover .search-bar {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(-50%) translateX(0);
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) translateX(0);
 }
 
 @media only screen and (max-width: 768px) {
-    .search-container {
-        position: static;
-        margin-left: 0;
-        width: 100%;
-        order: 3;
-        margin-top: 10px;
-    }
+  .search-container {
+    position: static;
+    margin-left: 0;
+    width: 100%;
+    order: 3;
+    margin-top: 10px;
+  }
 
-    .search-bar {
-        position: absolute;
-        left: 0;
-        right: auto;
-        top: 100%;
-        width: 100%;
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
-    }
+  .search-bar {
+    position: absolute;
+    left: 0;
+    right: auto;
+    top: 100%;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
 
-    .search-container:hover .search-bar,
-    .search-container:focus-within .search-bar {
-        transform: translateX(0);
-    }
-    
-    .article-text {
-       justify-content: center;
-    }
+  .search-container:hover .search-bar,
+  .search-container:focus-within .search-bar {
+    transform: translateX(0);
+  }
 
+  .article-text {
+    justify-content: center;
+  }
 }
 
 .search-bar input {
-    width: 100%;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-    
+
 .main-content {
-    padding: 40px 20px;
+  padding: 40px 20px;
 }
 
 .image-section img {
-    width: 100%;
-    height: 30rem;
-    border-radius: 5px;
+  width: 100%;
+  height: 30rem;
+  border-radius: 5px;
 }
-
 
 /* CSS Umum */
 .article-text {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.2rem;           /* menggunakan satuan relatif */
-    line-height: 1.5;            /* jarak antar baris yang nyaman */
-    text-align: justify;         /* perataan teks rata kanan-kiri */
-    word-spacing: -5px;        /* sebaiknya hindari nilai negatif (-3px) agar kata tidak saling menempel */
-    max-width: 800px;            /* batas maksimal lebar teks, agar tidak terlalu panjang di layar besar */
-    margin: 0 auto;              /* center teks pada container */
-    padding: 0 15px;             /* memberi jarak dari pinggiran layar */
-  }
-  
-  /* Penyesuaian untuk perangkat mobile */
-  @media (max-width: 768px) {
-    .article-text {
-      font-size: 1rem;         /* ukuran font sedikit mengecil di layar kecil */
-      line-height: 1.6;        /* jarak antar baris dioptimalkan untuk kenyamanan baca */
-      padding: 0 10px;       /* mengurangi padding agar teks pas di layar kecil */
-        
-    }
-  }
-  
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem; /* menggunakan satuan relatif */
+  line-height: 1.5; /* jarak antar baris yang nyaman */
+  text-align: justify; /* perataan teks rata kanan-kiri */
+  word-spacing: -4px; /* sebaiknya hindari nilai negatif (-3px) agar kata tidak saling menempel */
+  max-width: 800px; /* batas maksimal lebar teks, agar tidak terlalu panjang di layar besar */
+  margin: 0 auto; /* center teks pada container */
+}
 
-  .main-editorial {
-    padding-top: 40px;
-    padding-left:12px;
-    padding-right: 12px; 
+/* Penyesuaian untuk perangkat mobile */
+@media (max-width: 768px) {
+  .article-text {
+    font-size: 1rem; /* ukuran font sedikit mengecil di layar kecil */
+    line-height: 1.6; /* jarak antar baris dioptimalkan untuk kenyamanan baca */
+    padding: 0 10px; /* mengurangi padding agar teks pas di layar kecil */
+  }
+  .judul-editorial {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .editorial-meta {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
+  .editorial-title{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .editorial-image img {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .youtube-sidebar img {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+}
+
+.main-editorial {
+  padding-top: 40px;
+  padding-left: 12px;
+  padding-right: 12px;
+  max-width: 800px;
+}
 
 .article-title {
-    font-weight: bold;
-    font-size: 1.5rem;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .article-meta {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 }
 
 .separator {
-    width: 100%;
-    height: 1px;
-    background-color: black;
-    margin: 10px 0;
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  margin: 10px 0;
 }
 
 .editorial-container {
-    padding: 50px 0;
+  padding: 50px 0;
 }
 
 .editorial-title {
-    font-weight: bold;
-    font-size: 1.8rem;
-    text-decoration: underline;
-    
+  font-weight: bold;
+  font-size: 1.8rem;
+  text-decoration: underline;
 }
 
 .judul-editorial {
-    font-weight: bold;
-    font-size: 1.5rem;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .txt-link {
-    position: relative;
-    text-decoration: none;
-    color: #000; /* sesuaikan warna sesuai kebutuhan */
-  }
-  
-  /* Membuat garis bawah dengan pseudo-element */
-  .txt-link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px; /* ketebalan garis */
-    background-color: #000; /* sesuaikan warna garis */
-    transform: scaleX(0); /* mulai dalam keadaan tidak terlihat */
-    transform-origin: bottom left;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  /* Efek hover untuk menampilkan garis bawah */
-  .txt-link:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom right;
-  }
-  
+  position: relative;
+  text-decoration: none;
+  color: #000; /* sesuaikan warna sesuai kebutuhan */
+}
+
+/* Membuat garis bawah dengan pseudo-element */
+.txt-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px; /* ketebalan garis */
+  background-color: #000; /* sesuaikan warna garis */
+  transform: scaleX(0); /* mulai dalam keadaan tidak terlihat */
+  transform-origin: bottom left;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Efek hover untuk menampilkan garis bawah */
+.txt-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom right;
+}
+
 .editorial-meta {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 }
 
 .editorial-image img {
-    width: 100%;
-    border-radius: 5px;
+  width: 100%;
+  border-radius: 5px;
 }
 
 .editorial-text {
-    font-size: 1rem;
-    text-align: justify;
+  font-size: 1rem;
+  text-align: justify;
 }
 
 .youtube-sidebar img {
-    width: 100%;
-    height: 172px;
-    border-radius: 5px;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
+  width: 100%;
+  height: 172px;
+  border-radius: 5px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
 }
 
 .youtube-title {
-    font-size: 0.9rem;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 5px;
 }
 
 .footer .footer-logo {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
 }
 
 .footer .footer-contact {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 .footer {
   background-color: #aeaeb1;
-    position: relative;
+  position: relative;
 }
 .footer .footer-logo img {
-    height: 3rem;
-    width: 3rem;
-    border-radius: 50%;
-    flex-shrink: 0;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  flex-shrink: 0;
 }
 
 #scrollTopBtn {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: transparent;
-    border-color: black;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border-color: black;
 }
 
 .youtube-item {
-    position: relative;
+  position: relative;
 }
 
 .youtube-item a {
-    display: block;
+  display: block;
 }
 
 .youtube-item .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: 0.3s ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .youtube-item:hover .overlay {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .youtube-item .overlay i {
-    color: rgb(162, 147, 152);
-    font-size: 3rem;
-    margin-bottom: 30px;
-    padding-left: 20px;
+  color: rgb(162, 147, 152);
+  font-size: 3rem;
+  margin-bottom: 30px;
+  padding-left: 20px;
 }
 
 .main-arsip {
-    padding-top: 40px;
-    padding-left: 12px;
-    padding-right: 12px;
+  padding-top: 40px;
+  padding-left: 12px;
+  padding-right: 12px;
 }

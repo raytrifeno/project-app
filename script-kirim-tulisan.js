@@ -17,6 +17,17 @@
              function scrollToTop() {
                window.scrollTo({ top: 0, behavior: "smooth" });
              }
-             ClassicEditor.create(document.querySelector("#editor")).catch((error) => {
-                    console.error("Error initializing CKEditor:", error);
-                  });
+             $('#summernote').summernote({
+              placeholder: 'tulis karya anda disini...',
+              tabsize: 2,
+              height: 200,
+              toolbar: [
+                ['style', ['style']],
+                ['font', ['bold', 'underline', 'clear']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['table', ['table']],
+                ['insert', ['link', 'picture', 'video']],
+                ['view', ['fullscreen', 'codeview', 'help']]
+              ]
+            });
