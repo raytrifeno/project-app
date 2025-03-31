@@ -37,38 +37,7 @@
   border-radius: 50%;
 }
 
-.navbar-dark .navbar-nav .nav-link {
-  color: #ffffff;
-  margin: 0 10px;
-  position: relative;
-  display: inline-block;
-  padding: 5px 0;
-  transition: none;
-}
 
-.navbar-dark .navbar-nav .nav-link::after {
-  content: attr(data-text);
-  position: absolute;
-  font-weight: bold;
-  font-family: "roboto", sans-serif;
-  top: 5px;
-  right: 0;
-  width: 0;
-  overflow: hidden;
-  color: black;
-  white-space: nowrap;
-  transition: width 0.5s ease;
-  pointer-events: none;
-  direction: rtl;
-}
-
-.navbar-dark .navbar-nav .nav-link:hover {
-  opacity: 1;
-}
-
-.navbar-dark .navbar-nav .nav-link:hover::after {
-  width: 100%;
-}
 
 .search-container {
   position: relative;
@@ -243,7 +212,7 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 2px; /* ketebalan garis */
+  height: 1px; /* ketebalan garis */
   background-color: #000; /* sesuaikan warna garis */
   transform: scaleX(0); /* mulai dalam keadaan tidak terlihat */
   transform-origin: bottom left;
@@ -298,7 +267,7 @@
 }
 
 .footer {
-  background-color: #74665f;
+  background-color: #c7c5c5;
   position: relative;
 }
 .footer .footer-logo img {
@@ -355,6 +324,7 @@
   padding-right: 12px;
 }
 
+
       </style>
        
     </head>
@@ -370,11 +340,11 @@
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="editorail.html" data-text="Editorial">Editorial</a></li>
-                <li class="nav-item"><a class="nav-link" href="arsip.html" data-text="Arsip">Arsip</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html" data-text="About">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="kirim-tulisan.html" data-text="Kirim Tulisan">Kirim Tulisan</a></li>
+              <ul class="navbar-nav ms-auto gap-md-3 mb-2">
+                <li class="nav-item"><a class="txt-link nav-link" style="color: rgb(247, 251, 255); padding: 0; margin-top: 9px;" href="editorail.html">Editorial</a></li>
+                <li class="nav-item"><a class="txt-link nav-link" style="color: rgb(247, 251, 255); padding: 0; margin-top: 9px;" href="arsip.html">Arsip</a></li>
+                <li class="nav-item"><a class="txt-link nav-link" style="color: rgb(247, 251, 255); padding: 0; margin-top: 9px;" href="about.html">About</a></li>
+                <li class="nav-item"><a class="txt-link nav-link" style="color: rgb(247, 251, 255); padding: 0; margin-top: 9px;" href="kirim-tulisan.html">Kirim Tulisan</a></li>
               </ul>
               <!-- Search container -->
               <div class="search-container">
@@ -399,11 +369,10 @@
             <h2 class="article-title">JUDUL ARSIP JUDUL ARSIP BARU</h2>
             <p class="article-meta">NAMA PENULIS</p>
             <p class="article-text">
-             saya adalah seorang pengantar makanan yang
-            suka dengan pekerjaan saya, saya sangat menikmati setiap momen ketika saya bisa mengantarkan makanan kepada pelanggan dengan senyuman. Pekerjaan ini memberikan saya kesempatan untuk bertemu dengan banyak orang baru dan belajar tentang berbagai budaya dan kebiasaan mereka. Saya merasa bangga bisa menjadi bagian dari kebahagiaan mereka ketika mereka menerima makanan yang mereka pesan.</p>
-            <a href="content.html" class="txt-link text-black float-end me-3">READ MORE</a>
+             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet sapiente veniam id, at accusantium magni quidem! Rem, ad illo officia illum, pariatur doloribus voluptatum vel earum saepe maxime velit consectetur.</p>
+            <a href="content.html" class="txt-link text-black float-end me-3">Read More</a>
           </div>
-          <!-- maain arsip side -->
+          <!-- main arsip side -->
           <div class="col-md-4">
             <div class="archive-list">
               <div class="archive-item">
@@ -444,22 +413,22 @@
       <div class="row justify-content-center">
         <!-- Bagian Editorial -->
         <div class="col-md-8 text-start">
-          <h2 class="editorial-title mt-2">EDITORIAL TERBARU</h2>
+          <h2 class="editorial-title mt-2">Editorial Terbaru</h2>
           <div class="editorial-image pt-2">
             <img src="aset/3.jpeg" alt="Editorial Image" />
           </div>
           <p class="editorial-meta mt-3">Januari-2-2025</p>
-          <h3 class="judul-editorial">JUDUL EDITORIAL JUDUL EDITORIAL BARU</h3>
-          <p class="editorial-meta">NAMA PENULIS</p>
+          <h3 class="judul-editorial">Judul Editoral Terbaru</h3>
+          <p class="editorial-meta">Nama Penulis</p>
           <p class="article-text">
             saya adalah seorang pengantar makanan yang
             suka dengan pekerjaan saya, saya sangat menikmati setiap momen ketika saya bisa mengantarkan makanan kepada pelanggan dengan senyuman. Pekerjaan ini memberikan saya kesempatan untuk bertemu dengan banyak orang baru dan belajar tentang berbagai budaya dan kebiasaan mereka. Saya merasa bangga bisa menjadi bagian dari kebahagiaan mereka ketika mereka menerima makanan yang mereka pesan.</p>
-          <a href="#" class="txt-link text-black float-end me-3">READ MORE</a>
+          <a href="#" class="txt-link text-black float-end me-3">Read More</a>
         </div>
         
         <!-- Sidebar YouTube -->
         <div class="col-md-4 text-start">
-          <h3 class="editorial-title text-center mt-2" >KONTEN YOUTUBE</h3>
+          <h3 class="editorial-title text-center mt-2" >Konten YouTube</h3>
           <div class="youtube-sidebar pt-2">
             <div class="youtube-item">
               <a href="https://www.youtube.com" target="_blank">
@@ -468,7 +437,7 @@
                       <i class="bi bi-youtube"></i>
                   </div>
               </a>
-              <p class="youtube-title">JUDUL KONTEN JUDUL KONTEN</p>
+              <p class="youtube-title">Judul Konten Terbaru Judul Konten Terbaru</p>
           </div>
             <div class="separator"></div>
             <div class="youtube-item">
@@ -478,7 +447,7 @@
                       <i class="bi bi-youtube"></i>
                   </div>
               </a>
-              <p class="youtube-title">JUDUL KONTEN JUDUL KONTEN</p>
+              <p class="youtube-title">Judul Konten Terbaru Judul Konten Terbaru</p>
           </div>
             <div class="separator"></div>
             <div class="youtube-item">
@@ -488,7 +457,7 @@
                       <i class="bi bi-youtube"></i>
                   </div>
               </a>
-              <p class="youtube-title">JUDUL KONTEN JUDUL KONTEN</p>
+              <p class="youtube-title">Judul Konten Terbaru Judul Konten Terbaru</p>
           </div>
             <div class="separator"></div>
             <div class="youtube-item">
@@ -498,7 +467,7 @@
                       <i class="bi bi-youtube"></i>
                   </div>
               </a>
-              <p class="youtube-title">JUDUL KONTEN JUDUL KONTEN</p>
+              <p class="youtube-title">Judul Konten Terbaru Judul Konten Terbaru</p>
           </div>
           </div>
         </div>
@@ -537,9 +506,9 @@
       
       <!-- Navigasi Footer -->
       <div class="mb-3 text-start">
-        <a href="editorail.html" class="txt-link text-black mx-2">EDITORIAL</a> /
-        <a href="arsip.html" class="txt-link text-black mx-2">ARSIP</a> /
-        <a href="about.html" class="txt-link text-black mx-2">ABOUT</a> /
+        <a href="editorail.html" class="txt-link text-black mx-2">Editoral</a> /
+        <a href="arsip.html" class="txt-link text-black mx-2">Arsip</a> /
+        <a href="about.html" class="txt-link text-black mx-2">About</a> /
         <a href="kirim-tulisan.html" class="txt-link text-black mx-2">Kirim Tulisan</a>
       </div>
       
